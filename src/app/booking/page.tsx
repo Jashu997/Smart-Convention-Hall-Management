@@ -14,7 +14,7 @@ export default function BookingPage() {
     startTime: "18:00",
     endTime: "22:00",
     guests: 150,
-    packageType: packages[0].name,
+    packageType: packages[0].title,
     services: [] as string[],
     notes: "",
     estimatedTotal: packages[0].price,
@@ -26,7 +26,7 @@ export default function BookingPage() {
 
   const selectedPackage = useMemo(
     () =>
-      packages.find((item) => item.name === form.packageType) ?? packages[0],
+      packages.find((item) => item.title === form.packageType) ?? packages[0],
     [form.packageType],
   );
 
@@ -176,8 +176,8 @@ export default function BookingPage() {
                 className="rounded-2xl border border-white/10 bg-slate-950 px-4 py-3"
               >
                 {packages.map((pkg) => (
-                  <option key={pkg.name} value={pkg.name}>
-                    {pkg.name}
+                  <option key={pkg.id} value={pkg.title}>
+                    {pkg.title}
                   </option>
                 ))}
               </select>

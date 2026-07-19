@@ -2,33 +2,34 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const features = [
   {
-    title: "Hall details",
+    title: "Spacious Main Hall",
     description:
-      "Show capacity, amenities, parking, stage setup, and accessibility.",
+      "Comfortable seating arrangement for weddings, receptions, and large celebrations.",
   },
   {
-    title: "Image gallery",
+    title: "Fully Air Conditioned",
     description:
-      "Present weddings, receptions, and corporate events with rich visuals.",
+      "Modern air-conditioned hall for a pleasant experience throughout every event.",
   },
   {
-    title: "Booking workflow",
+    title: "Large Dining Hall",
     description:
-      "Allow customers to book dates, add services, and estimate costs.",
+      "Separate dining area with ample seating for guests.",
   },
   {
-    title: "Admin control",
+    title: "Ample Parking",
     description:
-      "Manage bookings, customers, invoices, availability, and reports.",
+      "Dedicated parking space for guests with easy access to the venue.",
   },
   {
-    title: "Notifications",
-    description: "Send confirmations, reminders, and cancellation updates.",
+    title: "24×7 Generator Backup",
+    description:
+      "Reliable power backup ensures uninterrupted celebrations.",
   },
   {
-    title: "Maps + directions",
+    title: "Multiple Event Packages",
     description:
-      "Help guests find the venue easily with integrated location support.",
+      "Suitable for weddings, receptions, engagements, birthdays, baby showers, and corporate events.",
   },
 ];
 
@@ -36,9 +37,9 @@ export function FeaturesSection() {
   return (
     <section className="rounded-[2rem] border border-white/10 bg-slate-900/70 p-8 sm:p-10">
       <SectionHeading
-        eyebrow="Platform Features"
-        title="A complete digital ecosystem for event booking and operations"
-        description="The product is designed to support both customer-facing booking and internal operations."
+        eyebrow="Our Facilities"
+        title="Everything You Need for a Perfect Celebration"
+        description="Sri Sarvamangala Kalyana Mandapam provides modern facilities and comfortable spaces to make every event memorable."
       />
 
       <div className="mt-8 grid gap-5 md:grid-cols-2 lg:grid-cols-3">

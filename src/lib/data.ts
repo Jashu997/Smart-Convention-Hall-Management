@@ -9,34 +9,145 @@ export const hallFeatures = [
 
 export const packages = [
   {
-    name: "Wedding Deluxe",
-    price: 180000,
+    id: 1,
+    title: "Marriage",
+    icon: "💍",
+    price: 65000,
+    duration: "1 Day",
+    guests: "Up to 1000 Guests",
     description:
-      "Ideal for grand weddings with premium decoration and catering support.",
-    highlights: [
-      "Premium stage setup",
-      "Catering coordination",
-      "Photography support",
+      "Perfect for traditional and modern weddings with spacious seating and premium facilities.",
+    includes: [
+      "Main Hall",
+      "Bride & Groom Rooms",
+      "Dining Hall",
+      "Parking",
+      "Power Backup",
+      "Basic Stage Decoration",
     ],
   },
+
   {
-    name: "Birthday Celebration",
-    price: 65000,
-    description: "A lively and affordable package for family celebrations.",
-    highlights: ["Theme decoration", "DJ and lighting", "Cake table setup"],
-  },
-  {
-    name: "Corporate Event",
-    price: 95000,
+    id: 2,
+    title: "Reception",
+    icon: "🎊",
+    price: 45000,
+    duration: "6-8 Hours",
+    guests: "Up to 1000 Guests",
     description:
-      "Professional package for conferences, seminars, and corporate gatherings.",
-    highlights: ["Projector support", "Seating layout", "Audio-visual setup"],
+      "Elegant reception setup with lighting and stage arrangements.",
+    includes: [
+      "Reception Stage",
+      "Dining Area",
+      "Parking",
+      "Generator Backup",
+    ],
+  },
+    {
+    id: 3,
+    title: "Engagement",
+    icon: "💍",
+    price: 25000,
+    duration: "4-6 Hours",
+    guests: "Up to 500 Guests",
+    description:
+      "Comfortable venue for engagement ceremonies and family gatherings.",
+    includes: [
+      "Hall",
+      "Stage",
+      "Lighting",
+      "Parking",
+    ],
+  },
+
+  {
+    id: 4,
+    title: "Half Saree Function",
+    icon: "👗",
+    price: 30000,
+    duration: "Full Day",
+    guests: "Up to 500 Guests",
+    description:
+      "Traditional Half Saree (Langa Voni) celebration with elegant decorations.",
+    includes: [
+      "Traditional Stage Decoration",
+      "Flower Decoration",
+      "Dining Hall",
+      "Parking",
+      "Power Backup",
+    ],
+  },
+
+  {
+    id: 5,
+    title: "Baby Shower",
+    icon: "🤱",
+    price: 20000,
+    duration: "4-6 Hours",
+    guests: "Up to 300 Guests",
+    description:
+      "Celebrate Seemantham or Baby Shower in a peaceful and spacious venue.",
+    includes: [
+      "Hall",
+      "Stage",
+      "Dining Area",
+      "Parking"
+    ]
+  },
+
+  {
+    id: 6,
+    title: "Birthday Party",
+    icon: "🎂",
+    price: 15000,
+    duration: "4 Hours",
+    guests: "Up to 200 Guests",
+    description:
+      "Ideal venue for birthday celebrations with family and friends.",
+    includes: [
+      "Hall",
+      "Decoration Area",
+      "Music Space"
+    ]
+  },
+
+  {
+    id: 7,
+    title: "Political Meeting",
+    icon: "🏛️",
+    price: 25000,
+    duration: "Full Day",
+    guests: "Up to 1000 Guests",
+    description:
+      "Suitable for political meetings, public gatherings and conferences.",
+    includes: [
+      "Main Hall",
+      "Stage",
+      "Sound System Space",
+      "Parking"
+    ]
+  },
+
+  {
+    id: 8,
+    title: "Corporate Event",
+    icon: "🏢",
+    price: 30000,
+    duration: "Full Day",
+    guests: "Up to 500 Guests",
+    description:
+      "Professional venue for meetings, seminars and business events.",
+    includes: [
+      "Conference Hall",
+      "Projector Space",
+      "Parking"
+    ]
   },
 ];
 
 export const services = [
-  { name: "Decoration", price: 15000 },
-  { name: "Photography", price: 20000 },
+  { name: "Decoration", price: 35000 },
+  { name: "Photography", price: 40000 },
   { name: "DJ", price: 18000 },
   { name: "Catering", price: 30000 },
   { name: "Security", price: 8000 },
@@ -81,8 +192,9 @@ export const stats = [
 ];
 
 export const contactInfo = {
-  phone: "+91 98765 43210",
-  email: "bookings@smartconventionhall.com",
-  address: "12, Heritage Road, Bengaluru, Karnataka",
-  hours: "Mon-Sun: 9:00 AM - 9:00 PM",
+  phone: "+91 9876543210", // Replace with your actual phone number
+  email: "info@srisarvamangala.com", // Replace with your actual email
+  address:
+    "Sri Sarvamangala Kalyana Mandapam, 92VJ+V3J, Srikakulam–Narasannapeta Road, Srirampuram, Ravulavalasa, Andhra Pradesh 532421",
+  hours: "9:00 AM – 9:00 PM",
 };

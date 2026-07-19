@@ -19,11 +19,11 @@ export default function PricingPage() {
             <div className="mt-6 space-y-4">
               {packages.map((pkg) => (
                 <div
-                  key={pkg.name}
+                  key={pkg.id}
                   className="rounded-2xl border border-white/10 bg-white/5 p-4"
                 >
                   <div className="flex items-center justify-between gap-3">
-                    <p className="font-semibold">{pkg.name}</p>
+                    <p className="font-semibold">{pkg.title}</p>
                     <p className="text-cyan-300">
                       ₹{pkg.price.toLocaleString()}
                     </p>

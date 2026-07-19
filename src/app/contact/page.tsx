@@ -25,13 +25,14 @@ export default function ContactPage() {
           </div>
 
           <div className="overflow-hidden rounded-3xl border border-cyan-400/30 bg-slate-900/70">
-            <iframe
-              title="Venue location"
-              src="https://www.google.com/maps?q=Bengaluru%20Karnataka&output=embed"
-              className="h-90 w-full border-0"
+           <iframe
+             title="Sri Sarvamangala Kalyana Mandapam Location"
+              src="https://maps.google.com/maps?q=Sri%20Sarvamangala%20Kalyana%20Mandapam%20Ravulavalasa%20Andhra%20Pradesh&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              className="h-[450px] w-full border-0"
               loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
+              allowFullScreen
+             referrerPolicy="no-referrer-when-downgrade"
+           />
           </div>
         </section>
       </div>

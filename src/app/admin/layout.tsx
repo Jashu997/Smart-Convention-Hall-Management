@@ -1,6 +1,6 @@
 import { redirect } from "next/navigation";
 import { requireAdmin } from "@/lib/auth/guard";
-import { DashboardShell } from "@/components/dashboard/DashboardShell";
+import { DashboardShell } from "../../components/dashboard/DashboardShell";
 
 export default async function AdminLayout({
   children,
@@ -8,7 +8,10 @@ export default async function AdminLayout({
   children: React.ReactNode;
 }) {
   const user = await requireAdmin();
-  if (!user) redirect("/auth");
+
+  if (!user) {
+    redirect("/auth");
+  }
 
   return <DashboardShell>{children}</DashboardShell>;
 }

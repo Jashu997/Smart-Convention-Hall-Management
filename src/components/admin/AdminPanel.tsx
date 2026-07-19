@@ -81,6 +81,7 @@ export function AdminPanel() {
                 <th className="px-3 py-2">Package</th>
                 <th className="px-3 py-2">Status</th>
                 <th className="px-3 py-2">Amount</th>
+                <th className="px-3 py-2 text-center">Actions</th>
               </tr>
             </thead>
             <tbody>
@@ -90,7 +91,29 @@ export function AdminPanel() {
                   <td className="px-3 py-3">{booking.eventDate}</td>
                   <td className="px-3 py-3">{booking.packageType}</td>
                   <td className="px-3 py-3">{booking.status}</td>
-                  <td className="px-3 py-3">₹{booking.estimatedTotal}</td>
+                  <td className="px-3 py-3">
+                    <div className="flex gap-2">
+
+                      <button
+                        className="rounded-lg bg-green-600 px-3 py-1 text-white hover:bg-green-700"
+                      >
+                        Approve
+                      </button>
+
+                      <button
+                        className="rounded-lg bg-yellow-500 px-3 py-1 text-white hover:bg-yellow-600"
+                      >
+                        Reject
+                      </button>
+
+                      <button
+                        className="rounded-lg bg-red-600 px-3 py-1 text-white hover:bg-red-700"
+                      >
+                        Delete
+                      </button>
+
+                    </div>
+                  </td>
                 </tr>
               ))}
             </tbody>
