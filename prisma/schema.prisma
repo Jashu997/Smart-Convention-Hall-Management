@@ -14,18 +14,6 @@ model Admin {
   password String
 }
 
-model Booking {
-  id             String   @id @default(cuid())
-  customerName   String
-  email          String
-  phone          String
-  eventDate      DateTime
-  packageType    String
-  estimatedTotal Int
-  status         String   @default("Pending")
-  createdAt      DateTime @default(now())
-}
-
 model Service {
   id    String @id @default(cuid())
   name  String
@@ -37,4 +25,56 @@ model Package {
   name        String
   price       Int
   description String
+}
+
+model Gallery {
+  id        String   @id @default(cuid())
+  title     String
+  imageUrl  String
+  createdAt DateTime @default(now())
+}
+
+model HallDetails {
+  id          String @id @default(cuid())
+  name        String
+  description String
+  address     String
+  phone       String
+  email       String
+  capacity    Int
+  mapUrl      String
+  heroImage   String
+}
+
+model Contact {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  phone     String
+  subject   String
+  message   String
+  status    String   @default("Unread")
+  createdAt DateTime @default(now())
+}
+
+model Booking {
+  id             String   @id @default(cuid())
+
+  customerName   String
+  email          String
+  phone          String
+
+  eventType      String
+  packageType    String
+
+  eventDate      DateTime
+
+  services       String?
+  notes          String?
+
+  estimatedTotal Int
+
+  status         String   @default("Pending")
+
+  createdAt      DateTime @default(now())
 }

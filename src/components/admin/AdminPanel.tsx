@@ -33,7 +33,7 @@ export function AdminPanel() {
 
   const loadData = async () => {
     const [bookingRes, serviceRes, packageRes] = await Promise.all([
-      fetch("/api/bookings"),
+      fetch("/api/booking"),
       fetch("/api/services"),
       fetch("/api/packages"),
     ]);
@@ -43,7 +43,13 @@ export function AdminPanel() {
   };
 
   useEffect(() => {
-    loadData();
+    void (async () => {
+      try {
+        await loadData();
+      } catch (error) {
+        console.error(error);
+      }
+    })();
   }, []);
 
   const createService = async (event: React.FormEvent) => {
