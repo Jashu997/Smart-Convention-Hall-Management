@@ -3,30 +3,29 @@ import { prisma } from "@/lib/prisma";
 
 export async function GET() {
   try {
-    const bookings = await prisma.booking.findMany();
+    const totalBookings = await prisma.booking.count();
 
-    const totalBookings = bookings.length;
+    const pending = await prisma.booking.count({
+      where: { status: "Pending" },
+    });
 
-    const pending = bookings.filter(
-      (booking) => booking.status === "Pending"
-    ).length;
+    const approved = await prisma.booking.count({
+      where: { status: "Approved" },
+    });
 
-    const approved = bookings.filter(
-      (booking) => booking.status === "Approved"
-    ).length;
+    const confirmed = await prisma.booking.count({
+      where: { status: "Confirmed" },
+    });
 
-    const confirmed = bookings.filter(
-      (booking) => booking.status === "Confirmed"
-    ).length;
+    const cancelled = await prisma.booking.count({
+      where: { status: "Cancelled" },
+    });
 
-    const cancelled = bookings.filter(
-      (booking) => booking.status === "Cancelled"
-    ).length;
-
-    const totalRevenue = bookings.reduce(
-      (sum, booking) => sum + booking.estimatedTotal,
-      0
-    );
+    const revenue = await prisma.booking.aggregate({
+      _sum: {
+        estimatedTotal: true,
+      },
+    });
 
     return NextResponse.json({
       totalBookings,
@@ -34,13 +33,13 @@ export async function GET() {
       approved,
       confirmed,
       cancelled,
-      totalRevenue,
+      totalRevenue: revenue._sum.estimatedTotal ?? 0,
     });
   } catch (error) {
     console.error(error);
 
     return NextResponse.json(
-      { error: "Failed to load dashboard statistics." },
+      { error: "Failed to load stats" },
       { status: 500 }
     );
   }
