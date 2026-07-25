@@ -89,7 +89,6 @@ export default async function BookingsPage() {
 
       {/* Booking Manager */}
       <BookingStatusManager />
-
     </div>
   );
 }
